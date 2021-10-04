@@ -61,14 +61,30 @@ let list = [{
 // deleteByID(); 
 
 // departmenti IT ga teng bo'lganlarni ajratib olish: 
-const sortBy = (sort) => {console.log(list.filter((value) => value.department === sort));}
+//const sortBy = (sort) => {console.log(list.filter((value) => value.department === sort));}
 
-// 6. const updateByID =()=>{}
-// updateByID();
+
+// 6. 
+    // const updateByID = (id) => {
+    //     let newData = list.map((value) => {
+    //     return value.id === id ? {...value, name:'New Name'} : value;
+    //     }); 
+    //     console.log(newData);
+    // }
+ 
+// updateByID(5);
 
 // 7. const createNew =()=>{}
 // createNew();
 
+const createNew = (value) => {console.log([...list, value]);}
 
-
-sortBy('MIS');
+createNew(
+    {
+        id: 7,
+        department: 'IT',
+        name: 'Olim',
+        surname: 'Yusupov',
+        year: 91
+      },
+)
